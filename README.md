@@ -30,29 +30,39 @@ java -version
 # Output: java version "1.8.0_XX"
 
 mvn -version
+```
 # Output: Apache Maven 3.6.3
 
 🚀 Installation et Configuration
 1️⃣ Cloner le projet
+```bash
 git clone https://github.com/fatmabaccari/medical-appointment-soap.git
 cd medical-appointment-soap
+```
 Configurer le JDK :
 File → Project Structure → Project → Project SDK : Java 1.8
 Project language level : 8
 🎯 Lancement du Projet
 Étape 1 : Démarrer le serveur
+```bash
 cd doc-time-server
 mvn clean compile exec:java
+```
 
 
-📌 Le serveur sera accessible sur : http://localhost:8084/docTime
+📌 Le serveur sera accessible sur : 
+
+http://localhost:8084/docTime
 📌 Le WSDL du service est disponible ici :
 
 http://localhost:8084/docTime?wsdl
 
-Étape 2 : Générer les classes clientes (si nécessaire)
+Étape 2 : Générer les classes clientes 
+```bash
 cd doc-time-client
 mvn clean compile
-
+```
 Étape 3 : Lancer le client
+```bash
 mvn exec:java
+```
