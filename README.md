@@ -21,7 +21,7 @@ Le projet inclut :
 |------------|----------------|
 | **JDK** | 1.8 (Java 8) |
 | **Maven** | 3.6 ou supérieur |
-| **IDE** | IntelliJ IDEA (recommandé) ou Eclipse |
+
 
 ### Vérification de l'installation
 
@@ -31,15 +31,16 @@ java -version
 
 mvn -version
 ```
-# Output: Apache Maven 3.6.3
+
 
 🚀 Installation et Configuration
-1️⃣ Cloner le projet
+ Cloner le projet
 ```bash
 git clone https://github.com/fatmabaccari/medical-appointment-soap.git
 cd medical-appointment-soap
 ```
 Configurer le JDK :
+
 File → Project Structure → Project → Project SDK : Java 1.8
 Project language level : 8
 🎯 Lancement du Projet
@@ -53,6 +54,7 @@ mvn clean compile exec:java
 📌 Le serveur sera accessible sur : 
 
 http://localhost:8084/docTime
+
 📌 Le WSDL du service est disponible ici :
 
 http://localhost:8084/docTime?wsdl
