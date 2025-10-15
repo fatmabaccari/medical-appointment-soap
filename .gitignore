@@ -1,0 +1,14 @@
+# IDE
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# Build
+target/
+bin/
+build/
+
+# Système
+.DS_Store
+*.log

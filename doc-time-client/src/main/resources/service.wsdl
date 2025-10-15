@@ -1,0 +1,113 @@
+
+<definitions xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://service/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/wsdl/" targetNamespace="http://service/" name="DocTime">
+    <types>
+        <xsd:schema>
+            <xsd:import namespace="http://service/" schemaLocation="http://localhost:8084/?xsd=1"/>
+        </xsd:schema>
+    </types>
+    <message name="getRendezvousByPatient">
+        <part name="parameters" element="tns:getRendezvousByPatient"/>
+    </message>
+    <message name="getRendezvousByPatientResponse">
+        <part name="parameters" element="tns:getRendezvousByPatientResponse"/>
+    </message>
+    <message name="annulerRendezVousParCritere">
+        <part name="parameters" element="tns:annulerRendezVousParCritere"/>
+    </message>
+    <message name="annulerRendezVousParCritereResponse">
+        <part name="parameters" element="tns:annulerRendezVousParCritereResponse"/>
+    </message>
+    <message name="getRendezvousByDoctor">
+        <part name="parameters" element="tns:getRendezvousByDoctor"/>
+    </message>
+    <message name="getRendezvousByDoctorResponse">
+        <part name="parameters" element="tns:getRendezvousByDoctorResponse"/>
+    </message>
+    <message name="getMedecinsParSpecialite">
+        <part name="parameters" element="tns:getMedecinsParSpecialite"/>
+    </message>
+    <message name="getMedecinsParSpecialiteResponse">
+        <part name="parameters" element="tns:getMedecinsParSpecialiteResponse"/>
+    </message>
+    <message name="reserverRendezVous">
+        <part name="parameters" element="tns:reserverRendezVous"/>
+    </message>
+    <message name="reserverRendezVousResponse">
+        <part name="parameters" element="tns:reserverRendezVousResponse"/>
+    </message>
+    <portType name="DocTime">
+        <operation name="getRendezvousByPatient">
+            <input wsam:Action="http://service/DocTime/getRendezvousByPatientRequest" message="tns:getRendezvousByPatient"/>
+            <output wsam:Action="http://service/DocTime/getRendezvousByPatientResponse" message="tns:getRendezvousByPatientResponse"/>
+        </operation>
+        <operation name="annulerRendezVousParCritere">
+            <input wsam:Action="http://service/DocTime/annulerRendezVousParCritereRequest" message="tns:annulerRendezVousParCritere"/>
+            <output wsam:Action="http://service/DocTime/annulerRendezVousParCritereResponse" message="tns:annulerRendezVousParCritereResponse"/>
+        </operation>
+        <operation name="getRendezvousByDoctor">
+            <input wsam:Action="http://service/DocTime/getRendezvousByDoctorRequest" message="tns:getRendezvousByDoctor"/>
+            <output wsam:Action="http://service/DocTime/getRendezvousByDoctorResponse" message="tns:getRendezvousByDoctorResponse"/>
+        </operation>
+        <operation name="getMedecinsParSpecialite">
+            <input wsam:Action="http://service/DocTime/getMedecinsParSpecialiteRequest" message="tns:getMedecinsParSpecialite"/>
+            <output wsam:Action="http://service/DocTime/getMedecinsParSpecialiteResponse" message="tns:getMedecinsParSpecialiteResponse"/>
+        </operation>
+        <operation name="reserverRendezVous">
+            <input wsam:Action="http://service/DocTime/reserverRendezVousRequest" message="tns:reserverRendezVous"/>
+            <output wsam:Action="http://service/DocTime/reserverRendezVousResponse" message="tns:reserverRendezVousResponse"/>
+        </operation>
+    </portType>
+    <binding name="DocTimePortBinding" type="tns:DocTime">
+        <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+        <operation name="getRendezvousByPatient">
+            <soap:operation soapAction=""/>
+            <input>
+                <soap:body use="literal"/>
+            </input>
+            <output>
+                <soap:body use="literal"/>
+            </output>
+        </operation>
+        <operation name="annulerRendezVousParCritere">
+            <soap:operation soapAction=""/>
+            <input>
+                <soap:body use="literal"/>
+            </input>
+            <output>
+                <soap:body use="literal"/>
+            </output>
+        </operation>
+        <operation name="getRendezvousByDoctor">
+            <soap:operation soapAction=""/>
+            <input>
+                <soap:body use="literal"/>
+            </input>
+            <output>
+                <soap:body use="literal"/>
+            </output>
+        </operation>
+        <operation name="getMedecinsParSpecialite">
+            <soap:operation soapAction=""/>
+            <input>
+                <soap:body use="literal"/>
+            </input>
+            <output>
+                <soap:body use="literal"/>
+            </output>
+        </operation>
+        <operation name="reserverRendezVous">
+            <soap:operation soapAction=""/>
+            <input>
+                <soap:body use="literal"/>
+            </input>
+            <output>
+                <soap:body use="literal"/>
+            </output>
+        </operation>
+    </binding>
+    <service name="DocTime">
+        <port name="DocTimePort" binding="tns:DocTimePortBinding">
+            <soap:address location="http://localhost:8084/"/>
+        </port>
+    </service>
+</definitions>
