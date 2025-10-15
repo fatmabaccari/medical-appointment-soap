@@ -33,7 +33,7 @@ mvn -version
 ```
 
 
-🚀 Installation et Configuration
+###🚀 Installation et Configuration
  Cloner le projet
 ```bash
 git clone https://github.com/fatmabaccari/medical-appointment-soap.git
@@ -42,8 +42,10 @@ cd medical-appointment-soap
 Configurer le JDK :
 
 File → Project Structure → Project → Project SDK : Java 1.8
+
 Project language level : 8
-🎯 Lancement du Projet
+
+###🎯 Lancement du Projet
 Étape 1 : Démarrer le serveur
 ```bash
 cd doc-time-server
