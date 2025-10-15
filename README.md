@@ -62,23 +62,18 @@ File → Project Structure → Project → Project SDK : Java 1.8
 
 Project language level : 8
 
-###🎯 Lancement du Projet
+## 🎯 Lancement du Projet
+
 Étape 1 : Démarrer le serveur
+
 ```bash
 cd doc-time-server
 mvn clean compile exec:java
 ```
 
 
-📌 Le serveur sera accessible sur : 
-
-http://localhost:8084/docTime
-
-📌 Le WSDL du service est disponible ici :
-
-http://localhost:8084/docTime?wsdl
-
 Étape 2 : Générer les classes clientes 
+
 ```bash
 cd doc-time-client
 mvn clean compile
@@ -87,3 +82,11 @@ mvn clean compile
 ```bash
 mvn exec:java
 ```
+
+📌 Le serveur sera accessible sur : 
+
+http://localhost:8084/docTime
+
+📌 Le WSDL du service est disponible ici :
+
+http://localhost:8084/docTime?wsdl
