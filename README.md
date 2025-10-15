@@ -32,8 +32,25 @@ java -version
 mvn -version
 ```
 
-
-###🚀 Installation et Configuration
+## 🏗️ Structure du Projet
+```bash
+medical-appointment-soap/
+├── doc-time-server/          # Serveur SOAP
+│   ├── src/main/java/
+│   │   ├── server/ServeurJWS.java    # Point d'entrée serveur
+│   │   ├── service/DocTime.java      # Interface et logique métier du service
+│   │   └── model/                    # Classes métier
+│   │       ├── Medecin.java         # Représente un médecin (id, nom, spécialité)
+│   │       └── Rendezvous.java      # Représente un rendez-vous (id, date, patient, médecin)
+│   └── pom.xml
+├── doc-time-client/          # Client SOAP
+│   ├── src/main/java/
+│   │   ├── DocTime.java              # Interface du client pour consommer le service
+│   │   └── org/sid/Main.java         # Point d'entrée du client
+│   └── pom.xml
+└── README.md
+```
+## 🚀 Installation et Configuration
  Cloner le projet
 ```bash
 git clone https://github.com/fatmabaccari/medical-appointment-soap.git
